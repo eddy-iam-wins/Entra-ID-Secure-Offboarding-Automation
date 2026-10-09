@@ -56,33 +56,29 @@ This separation creates a clear **Discover → Deprovision → Verify** model an
 The project models an HR-driven identity lifecycle workflow in which termination data initiates discovery, deprovisioning, verification, and audit activities in Microsoft Entra ID.
 
 ```mermaid
-
 flowchart LR
 
-    HR\\\["HR Termination CSV"] --> DISC\\\["Pre-Offboarding Discovery"]
+    HR["HR Termination CSV"] --> DISC["Pre-Offboarding Discovery"]
 
-    DISC --> ENTRA\\\["Microsoft Entra ID"]
+    DISC --> ENTRA["Microsoft Entra ID"]
+    DISC --> PRE["Pre-Offboarding Access Report"]
 
-    DISC --> PRE\\\["Pre-Offboarding Report"]
+    ENTRA --> OFF["Secure Offboarding Automation"]
 
-    ENTRA --> OFF\\\["Secure Offboarding Automation"]
+    OFF --> DISABLE["Disable Account"]
+    OFF --> SESSION["Revoke Sign-In Sessions"]
+    OFF --> GOVERNED["Remove Governed Access"]
+    OFF --> DIRECT["Remove Direct Group Access"]
 
-    OFF --> DISABLE\\\["Disable Account"]
+    DISABLE --> VERIFY["Post-Offboarding Verification"]
+    SESSION --> VERIFY
+    GOVERNED --> VERIFY
+    DIRECT --> VERIFY
 
-    OFF --> SESSION\\\["Revoke Sign-In Sessions"]
+    VERIFY --> POST["Verification Report"]
+    VERIFY --> AUDIT["Offboarding Audit Report"]
 
-    OFF --> GOVERNED\\\["Remove Governed Access"]
-
-    OFF --> DIRECT\\\["Remove Direct Group Access"]
-
-    OFF --> AUDIT\\\["Offboarding Audit Report"]
-
-    OFF --> VERIFY\\\["Post-Offboarding Verification"]
-
-    VERIFY --> POST\\\["Verification Report"]
-
-    ENTRA --> LOGS\\\["Entra Audit Logs"]
-
+    ENTRA --> LOGS["Entra Audit Logs"]
 ```
 
 The architecture intentionally separates **discovery**, **deprovisioning**, and **verification**. This creates multiple sources of evidence and supports before-and-after access reconciliation rather than relying only on successful PowerShell execution.
