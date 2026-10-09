@@ -53,7 +53,7 @@ This separation creates a clear **Discover → Deprovision → Verify** model an
 
 ## IAM Architecture
 
-The project models an HR-driven identity lifecycle workflow in which termination data initiates discovery, deprovisioning, verification, and audit activities in Microsoft Entra ID.
+The project models an HR-driven identity offboarding workflow in which termination data initiates discovery, deprovisioning, verification, and audit activities in Microsoft Entra ID.
 
 ```mermaid
 flowchart LR
