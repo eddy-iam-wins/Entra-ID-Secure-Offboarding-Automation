@@ -1,0 +1,2 @@
+EmployeeName,UserPrincipalName,Department,JobTitle,AccountEnabled,Groups,Licenses,TerminationDate,DiscoveryDate
+Bob Moore,bob.moore@contoso.com,Finance,Senior Financial Analyst,TRUE,All Employees; Finance Team,None,10/7/2026,10/7/2026 18:54

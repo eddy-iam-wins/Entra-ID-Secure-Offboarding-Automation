@@ -1,0 +1,2 @@
+EmployeeName,UserPrincipalName,Department,AccountEnabled,RemainingGroups,RemainingLicenses,TerminationDate,VerificationDate
+Bob Moore,bob.moore@contoso.com,Finance,FALSE,None,None,10/7/2026,10/7/2026 20:42

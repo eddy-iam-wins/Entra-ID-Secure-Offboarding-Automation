@@ -1,0 +1,2 @@
+EmployeeName,UserPrincipalName,Department,TerminationDate,AccountStatus,SessionStatus,FinanceAccessStatus,AllEmployeesStatus,OverallStatus,ProcessedDate
+Bob Moore,bob.moore@contoso.com,Finance,10/7/2026,Already Disabled,Revoked,Already Removed,Already Removed,Completed,10/8/2026 18:03
