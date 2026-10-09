@@ -106,11 +106,14 @@ This distinction is important during offboarding because access should be remove
 
 The `Finance Operations Access Package` provides governed membership to the `Finance Team` security group.
 
-!\[Finance Access Package Resources - Part 1](Screenshots/03-Finance-Access-Package-Resources%20part%201.png)
+Finance Access Package Resources (Screenshots/03-Finance-Access-Package-Resources part 1.png)
+<img width="1156" height="438" alt="03-Finance-Access-Package-Resources part 1" src="https://github.com/user-attachments/assets/61e6b365-2b4e-47da-82fb-a245a97af1e1" />
 
 
 
-!\[Finance Access Package Resources - Part 2](Screenshots/03-Finance-Access-Package-Resources%20part%202.png)
+Finance Access Package Resources (Screenshots/03-Finance-Access-Package-Resources part 2.png)
+<img width="1597" height="357" alt="03-Finance-Access-Package-Resources part 2" src="https://github.com/user-attachments/assets/6cf984b6-f559-44e9-abb6-97183f32d320" />
+
 
 
 
@@ -118,7 +121,9 @@ The `Finance Operations Access Package` provides governed membership to the `Fin
 
 Before offboarding, the employee successfully requested and received the Finance Access Package, resulting in governed access to the `Finance Team` security group.
 
-!\[Finance Access Package Assignment](Screenshots/13-Bob-Finance-Access-Package-Assignment.png)
+Finance Access Package Assignment (Screenshots/13-Bob-Finance-Access-Package-Assignment.png)
+<img width="1566" height="380" alt="13-Bob-Finance-Access-Package-Assignment" src="https://github.com/user-attachments/assets/4ca90af3-8952-436d-aa2a-45f65fcff70f" />
+
 
 
 
@@ -132,12 +137,14 @@ The termination input contains the employee's User Principal Name, employee name
 
 ### HR Termination Input
 
-!\[HR Termination CSV - Part 1](Screenshots/15-Termination-Input-CSV%20part%201.png)
+HR Termination CSV - Part 1 (Screenshots/15-Termination-Input-CSV part 1.png)
+<img width="2170" height="725" alt="15-Termination-Input-CSV part 1" src="https://github.com/user-attachments/assets/b5a416b0-4c32-4676-a4c2-8b59315095db" />
 
 
 
-!\[HR Termination CSV - Part 2](Screenshots/15-Termination-Input-CSV%20part%202.png)
 
+HR Termination CSV - Part 2 (Screenshots/15-Termination-Input-CSV part 2.png)
+<img width="894" height="379" alt="15-Termination-Input-CSV part 2" src="https://github.com/user-attachments/assets/87e5cdca-0c0c-478c-a4cd-ee72e238ffb0" />
 
 
 The automation processes the termination record through the following workflow:
@@ -233,7 +240,8 @@ Pre-offboarding discovery confirmed that the employee account was enabled and ha
 
 The Finance Team membership originated from the approved Finance Access Package assignment.
 
-!\[Pre-Offboarding Access Report](Screenshots/19-Pre-Offboarding-Access-Report.png)
+Pre-Offboarding Access Report (Screenshots/19-Pre-Offboarding-Access-Report.png)
+<img width="1402" height="358" alt="19-Pre-Offboarding-Access-Report" src="https://github.com/user-attachments/assets/58130296-01f4-4b6d-b193-c6349def3477" />
 
 
 
@@ -245,7 +253,8 @@ The separate verification script queried Microsoft Entra ID after deprovisioning
 * Remaining group memberships: `None`
 * Remaining licenses: `None`
 
-!\[Post-Offboarding Verification Report](Screenshots/26-Post-Offboarding-Verification-Report.png)
+Post-Offboarding Verification Report (Screenshots/26-Post-Offboarding-Verification-Report.png)
+<img width="1183" height="364" alt="26-Post-Offboarding-Verification-Report" src="https://github.com/user-attachments/assets/f69d79ca-5789-4359-b246-70fa3048d3f9" />
 
 
 
@@ -287,7 +296,8 @@ The report tracks:
 
 The final state-aware validation recorded the account as `Already Disabled`, sign-in sessions as `Revoked`, Finance access as `Already Removed`, and All Employees access as `Already Removed`, with an overall status of `Completed`.
 
-!\[Final Offboarding Audit Report](Screenshots/33-Final-Offboarding-Audit-Report.png)
+Final Offboarding Audit Report (Screenshots/33-Final-Offboarding-Audit-Report.png)
+<img width="1197" height="348" alt="33-Final-Offboarding-Audit-Report" src="https://github.com/user-attachments/assets/c18d25fa-3e87-4032-9e96-bcad1882edfc" />
 
 
 
@@ -301,7 +311,8 @@ PowerShell-generated reports are supplemented with Microsoft Entra audit logs, p
 
 Microsoft Entra recorded the modification to the employee's user object, showing `AccountEnabled` changing from `true` to `false`.
 
-!\[Entra Audit Account Disabled](Screenshots/28-Entra-Audit-Account-Disabled.png)
+Entra Audit Account Disabled (Screenshots/28-Entra-Audit-Account-Disabled.png)
+ <img width="1899" height="944" alt="28-Entra-Audit-Account-Disabled" src="https://github.com/user-attachments/assets/065f5bed-3b5d-464d-98d9-96fb3e398e95" />
 
 
 
@@ -309,7 +320,8 @@ Microsoft Entra recorded the modification to the employee's user object, showing
 
 Microsoft Entra recorded a successful `Administrator directly removes user access package assignment` event. This confirms that Finance access was deprovisioned through Entitlement Management rather than by directly removing the resulting Finance Team group membership.
 
-!\[Entra Audit Access Package Removed](Screenshots/29-Entra-Audit-Access-Package-Removed.png)
+Entra Audit Access Package Removed (Screenshots/29-Entra-Audit-Access-Package-Removed.png)
+<img width="1897" height="955" alt="29-Entra-Audit-Access-Package-Removed" src="https://github.com/user-attachments/assets/b692a380-8a1a-49ed-ad4f-062ffc432714" />
 
 
 
@@ -317,7 +329,8 @@ Microsoft Entra recorded a successful `Administrator directly removes user acces
 
 Microsoft Entra recorded a successful `Remove member from group` operation initiated through Microsoft Graph. The audit details identify the affected group as `All Employees`.
 
-!\[Entra Audit All Employees Removed](Screenshots/31-Entra-Audit-All-Employees-Removed.png)
+Entra Audit All Employees Group Removed (Screenshots/31-Entra-Audit-All-Employees-Removed.png)
+ <img width="1882" height="947" alt="31-Entra-Audit-All-Employees-Removed" src="https://github.com/user-attachments/assets/9a97f9e8-0f19-436d-81f0-8ebf0d5af6d0" />
 
 Together, the automation reports, independent post-offboarding verification, and Microsoft Entra audit logs provide multiple layers of evidence that the expected offboarding controls were successfully applied.
 
